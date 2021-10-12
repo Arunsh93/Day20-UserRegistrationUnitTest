@@ -70,5 +70,21 @@ namespace UserResistrationTest
             //Assertion
             Assert.AreEqual(ExpectedName, ActualName);
         }
+        [TestMethod]
+        public void TestUserPassword()
+        {
+            UserResistrationValidation userResistration = new UserResistrationValidation();
+
+            //Arrange
+            bool ExpectedName = true;
+            string password = "Arun!123";
+            bool ActualName;
+
+            //Action
+            ActualName = userResistration.ValidatePassword(password);
+
+            //Assertion
+            Assert.AreEqual(ExpectedName, ActualName);
+        }
     }
 }
