@@ -15,6 +15,7 @@ namespace UserResistration
         public static string RegexPassword2 = "^(?=.*[A-Z])[A-Za-z0-9.@!#$&]{8,}$";
         public static string RegexPassword3 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9.@!#$&]{8,}$";
         public static string RegexPassword4 = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@!#$&])[A-Za-z0-9.@!#$&]{8,}$";
+        public static string UC9RegexEmailId = "^[A-Za-z0-9]+([-.+][0-9]+)?[0-9]*[@][A-Za-z0-9]+[.][a-zA-Z]{2,}([.][a-z]{2,})?$";
 
         public bool ValidateFirstName(string firstName)
         {
@@ -39,6 +40,11 @@ namespace UserResistration
         public bool ValidatePassword(string password)
         {
             return Regex.IsMatch(password, RegexPassword4);
+        }
+
+        public bool ValidateSampleEmailIds(string emailId)
+        {
+            return Regex.IsMatch(emailId, UC9RegexEmailId);
         }
     }
 }
