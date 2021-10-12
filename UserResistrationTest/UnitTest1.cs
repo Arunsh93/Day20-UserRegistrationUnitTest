@@ -38,6 +38,22 @@ namespace UserResistrationTest
             //Assertion
             Assert.AreEqual(ExpectedName, ActualName);
         }
+        [TestMethod]
+        public void TestUserEmailId()
+        {
+            UserResistrationValidation userResistration = new UserResistrationValidation();
+
+            //Arrange
+            bool ExpectedName = true;
+            string emailId = "abc.arun@bl.co.in";
+            bool ActualName;
+
+            //Action
+            ActualName = userResistration.ValidateLastName(emailId);
+
+            //Assertion
+            Assert.AreEqual(ExpectedName, ActualName);
+        }
 
     }
 }
