@@ -5,14 +5,12 @@ namespace UserResistration
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        { 
                 Console.WriteLine("*****Welcome to User Resistration*****");
                 UserResistrationValidation userResistration = new UserResistrationValidation();
-                Console.Write("Enter First Name: ");
-                string FirstName = Console.ReadLine();
-                bool Result = userResistration.ValidateFirstName(FirstName);
-
+                Console.Write("Enter Last Name: ");
+                string LastName = Console.ReadLine();
+                bool Result = userResistration.ValidateLastName(LastName);
                 if (Result == true)
                 {
                     Console.WriteLine("Valid Name!");
@@ -20,8 +18,7 @@ namespace UserResistration
                 else
                 {
                     Console.WriteLine("Invalid Name!");
-                }
-            
+                }           
         }
     }
 }
