@@ -77,7 +77,7 @@ namespace UserResistrationTest
 
             //Arrange
             bool ExpectedName = true;
-            string password = "ArunHosur@12";
+            string password = "Arunsh@123";
             bool ActualName;
 
             //Action
