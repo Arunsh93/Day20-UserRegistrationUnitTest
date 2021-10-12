@@ -6,19 +6,19 @@ namespace UserResistration
     {
         static void Main(string[] args)
         { 
-                Console.WriteLine("*****Welcome to User Resistration*****");
-                UserResistrationValidation userResistration = new UserResistrationValidation();
-                Console.Write("Enter Last Name: ");
-                string LastName = Console.ReadLine();
-                bool Result = userResistration.ValidateLastName(LastName);
-                if (Result == true)
-                {
-                    Console.WriteLine("Valid Name!");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Name!");
-                }           
+            Console.WriteLine("*****Welcome to User Resistration*****");
+            UserResistrationValidation userResistration = new UserResistrationValidation();
+            Console.Write("Enter EmailId: ");
+            string Email = Console.ReadLine();
+            bool Result = userResistration.ValidateEmailId(Email);
+            if (Result == true)
+            {
+                Console.WriteLine("Valid EmailId!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid EmailId!");
+            }
         }
     }
 }
