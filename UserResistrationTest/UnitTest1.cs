@@ -7,7 +7,7 @@ namespace UserResistrationTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestUserFirstName()
         {
             UserResistrationValidation userResistration = new UserResistrationValidation();
 
@@ -22,5 +22,22 @@ namespace UserResistrationTest
             //Assertion
             Assert.AreEqual(ExpectedName, ActualName);
         }
+        [TestMethod]
+        public void TestUserLastName()
+        {
+            UserResistrationValidation userResistration = new UserResistrationValidation();
+
+            //Arrange
+            bool ExpectedName = true;
+            string lastName = "Hosur";
+            bool ActualName;
+
+            //Action
+            ActualName = userResistration.ValidateLastName(lastName);
+
+            //Assertion
+            Assert.AreEqual(ExpectedName, ActualName);
+        }
+
     }
 }
