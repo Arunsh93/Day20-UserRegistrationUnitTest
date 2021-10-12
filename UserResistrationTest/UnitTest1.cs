@@ -49,11 +49,26 @@ namespace UserResistrationTest
             bool ActualName;
 
             //Action
-            ActualName = userResistration.ValidateLastName(emailId);
+            ActualName = userResistration.ValidateEmailId(emailId);
 
             //Assertion
             Assert.AreEqual(ExpectedName, ActualName);
         }
+        [TestMethod]
+        public void TestUserMobileNumber()
+        {
+            UserResistrationValidation userResistration = new UserResistrationValidation();
 
+            //Arrange
+            bool ExpectedName = true;
+            string phoneNumber = "91 9620692457";
+            bool ActualName;
+
+            //Action
+            ActualName = userResistration.ValidatePhoneNumber(phoneNumber);
+
+            //Assertion
+            Assert.AreEqual(ExpectedName, ActualName);
+        }
     }
 }
