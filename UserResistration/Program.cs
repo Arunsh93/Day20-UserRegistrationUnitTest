@@ -8,16 +8,16 @@ namespace UserResistration
         { 
             Console.WriteLine("*****Welcome to User Resistration*****");
             UserResistrationValidation userResistration = new UserResistrationValidation();
-            Console.Write("Enter EmailId: ");
-            string Email = Console.ReadLine();
-            bool Result = userResistration.ValidateEmailId(Email);
+            Console.Write("Enter Phone Number: ");
+            string phoneNumber = Console.ReadLine();
+            bool Result = userResistration.ValidateEmailId(phoneNumber);
             if (Result == true)
             {
-                Console.WriteLine("Valid EmailId!");
+                Console.WriteLine("Valid Phone Number!");
             }
             else
             {
-                Console.WriteLine("Invalid EmailId!");
+                Console.WriteLine("Invalid Phone Number!");
             }
         }
     }
