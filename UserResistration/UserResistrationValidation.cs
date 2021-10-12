@@ -13,6 +13,7 @@ namespace UserResistration
         public static string RegexPhoneNumber = "^[0-9]{2}[ ][0-9]{10}$";
         public static string RegexPassword1 = "^[A-Za-z0-9.@!#$&]{8,}$";
         public static string RegexPassword2 = "^(?=.*[A-Z])[A-Za-z0-9.@!#$&]{8,}$";
+        public static string RegexPassword3 = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9.@!#$&]{8,}$";
 
         public bool ValidateFirstName(string firstName)
         {
@@ -36,7 +37,7 @@ namespace UserResistration
 
         public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(password, RegexPassword2);
+            return Regex.IsMatch(password, RegexPassword3);
         }
     }
 }
